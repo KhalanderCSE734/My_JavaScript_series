@@ -1,0 +1,37 @@
+* {
+    margin:0;
+    padding:0;
+    margin:20px;
+    border:none;
+}
+
+button {        
+    padding:10px 20px;
+    color:green;
+    background-color:red;
+}
+p {
+    background-color: aquamarine;
+}
+h1 {
+    color:aqua;
+}
+body{
+    background-color:rgba(0, 0, 255, 0.703);
+}
+.parent {
+    color:rgb(255, 0, 21);
+    background-color: rgb(192, 192, 255);
+    font-size:20px;
+}
+
+.innerParent {
+    color:olivedrab;
+    background-color: black;
+    font-size:xx-large;
+}
+.anotherDiv {
+    height:100px;
+    background-color: green;
+    font-size: xx-large;
+}
