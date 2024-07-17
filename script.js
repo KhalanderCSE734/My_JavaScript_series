@@ -507,4 +507,5 @@ fun1(1).then((resolved)=>{
 
 */
 
+console.log("Hello there");
 
