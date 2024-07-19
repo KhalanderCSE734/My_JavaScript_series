@@ -3,6 +3,86 @@
 // alert("No");
 // let variable = {name:"MohammedKhalander",SGPA:9.6}; // Object
 // let arr = [3,2,6,3,6,8,8,0];
+
+// We can even use for of loop , but it is not used for objects 
+// let name = "Mohammed Khalander";
+// for(let i of name){
+//     console.log(i);     // It will take the values inside the string 
+// }
+
+// to loop over objects we use for in loop
+// let obj = {
+//     name:"Khalander",
+//     Sem:2,
+//     cgpa:9.8,
+//     dream:"Adobe"
+// }
+// for(key in obj){
+//     console.log(key," ", obj[key]);
+// }
+
+
+//splice is very usefull method in order to  make changes in array using indices or to add elements in beginning or wherever you want
+// let arr = [1,2,5,6,7,20,8,10];
+// arr.splice(2,0,3,4); // add
+// arr.splice(7,1); //delete
+// arr.splice(8,0,9); // add
+// console.log(arr);
+
+//If we pass only single argument in splice, then it will delete all the elements from that idex
+
+// let company = ["Bloomberg", "Microsoft", "google", "Uber", "IBM", "Netflix"];
+// console.log(company.shift());
+// console.log(company);
+
+// company.splice(2,1,"Ola");
+// console.log(company);
+
+// company.push("amazon");
+// console.log(company);
+ 
+
+// let cities = ["shivamogga","bengalore","bhadravathi","bihar","rajasthan","gujarath"];
+// cities.forEach((city)=>{
+//     console.log(city.toUpperCase());
+// });
+// const upperMap = cities.map((city)=>{
+//     return (city[0].toUpperCase() + city.slice(1));
+// });;
+// console.log(upperMap);
+
+//forEach  is only used for arrays not for string
+
+// const arr = [1,2,3,4,5];
+// let newArr1 = arr.map((val)=>{
+//     return val%2===0;        //Imp Look out this, this thing ain't work so we should use filter to do so
+// });
+
+// console.log(newArr2);
+// map will in this case returns true or false, a step forward filter will store the true values 
+
+
+// let newArr2 = arr.filter((val)=>{
+//     return val%2===0;       
+// });
+
+// console.log(newArr2);
+
+// Reduce method perform some operations on array and returns single value at the end
+
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+
+/* in each iteration 'res' will have returned value and 'cur' will have the 'i'th value of array
+    but in first iteration 'res' takes first value and 'cur' takes second value 
+    And then first line things happen
+*/
+// const result = arr.reduce((res,cur)=>{
+//     return res+cur;
+// });
+
+// console.log(result);
+
+
 // for(i in arr) {
 //     console.log(i);  // 'i' refers to index
 // }
