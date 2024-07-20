@@ -164,7 +164,20 @@
 
 /* The above thing is known as Higher order function or callback function (passing function itself as an argument) */
 
+
+// DOM PART
+
 // console.log(window);
+// Window object is created by browser itself
+//DOM is "When we create html and js files, html elements converts into object in js files and called Document object model which is present in window object"
+// We can log it by "window.document"
+// In order to print objects like in document we use 'console.dir' instead log
+//When DOM tree is created we get 3 children of it 'text node', 'comments' and 'elements', We concern only about 'elements' node
+
+// Difference between 'innerText' and 'textContent' is , 'textContent shows the content of hidden elements also
+
+// let naam = document.querySelector(".name");
+// naam.innerText = naam.innerText + " \n Is my name";
 
 
 // let a = document.querySelector(".first");
