@@ -220,7 +220,7 @@
 // a.getAttribute("class");
 // let div = a.getAttribute("class");
 // console.log(div);
-// a.setAttribute("class", "Myclass"); // Never Use Set Attribut Only use classList
+// a.setAttribute("class", "Myclass");                      // Never Use Set Attribut Only use classList
 // let newOne = a.getAttribute("class");
 // console.log(newOne);
 
@@ -229,6 +229,42 @@
 // a.style.backgroundColor = "blue";
 // a.style.fontSize = "60px";
   
+
+
+/*
+
+adding elements wherever in html using javascript
+first create an element and then add wherever you want
+
+para.append(button);   It will add at the end of the node, but inside it only not out of the node or something
+
+para.after(button); It will add at the end of the node, but outside, this thing we can use 
+
+*/
+
+let para = document.querySelector(".para");
+const button = document.createElement("button");
+button.classList.add("newButton");
+button.textContent = "Change Mode!";
+button.style.padding = "15px";
+button.style.color = "cyan";
+button.style.backgroundColor = "lightcoral";
+button.style.cursor = "pointer";
+let body = document.querySelector("body");
+body.prepend(button);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*  Creating new elements in js*/
 
