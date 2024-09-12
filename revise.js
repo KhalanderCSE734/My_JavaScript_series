@@ -46,7 +46,7 @@ console.log(1=="1");    //true in js but, we can't even make that check in java
 
 let name = "Mohammed Khalander"
 for(let i in name){
-    console.log(i);  //                  This will print 1,2,3,4,......,17 numbers
+    console.log(i);  //                  This will print 1,2,3,4,......,17 numbers      but, it will print key if we take object 
 }
 for(let i of name){
     console.log(i);   //                    This will print characters 

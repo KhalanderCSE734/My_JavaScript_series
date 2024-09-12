@@ -7,7 +7,7 @@
 // We can even use for of loop , but it is not used for objects 
 // let name = "Mohammed Khalander";
 // for(let i of name){
-//     console.log(i);     // It will take the values inside the string 
+//     console.log(i);     // It will take the values (characters) inside the string 
 // }
 
 // to loop over objects we use for in loop
@@ -15,7 +15,8 @@
 //     name:"Khalander",
 //     Sem:2,
 //     cgpa:9.8,
-//     dream:"Adobe"
+//     dream:"Adobe",
+//     sgpa:9.95,
 // }
 // for(key in obj){
 //     console.log(key," ", obj[key]);
@@ -31,25 +32,27 @@
 
 //If we pass only single argument in splice, then it will delete all the elements from that idex
 
-// let company = ["Bloomberg", "Microsoft", "google", "Uber", "IBM", "Netflix"];
-// console.log(company.shift());
-// console.log(company);
+// let company = ["Bloomberg", "Microsoft", "Google", "Uber", "IBM", "Netflix"];
+// console.log(company.shift());           //[ 'Microsoft', 'Google', 'Uber', 'IBM', 'Netflix' ]
+// console.log(company);            
 
 // company.splice(2,1,"Ola");
-// console.log(company);
+// console.log(company);               //[ 'Bloomberg', 'Microsoft', 'Ola', 'Uber', 'IBM', 'Netflix' ]
 
 // company.push("amazon");
-// console.log(company);
+// console.log(company);                ["Bloomberg", "Microsoft", "Google", "Uber", "IBM", "Netflix", "amazon"]
  
 
 // let cities = ["shivamogga","bengalore","bhadravathi","bihar","rajasthan","gujarath"];
 // cities.forEach((city)=>{
 //     console.log(city.toUpperCase());
 // });
+
 // const upperMap = cities.map((city)=>{
 //     return (city[0].toUpperCase() + city.slice(1));
 // });;
 // console.log(upperMap);
+
 
 //forEach  is only used for arrays not for string
 
@@ -81,6 +84,41 @@
 // });
 
 // console.log(result);
+
+
+
+/*
+    let numbers = [1, 2, 3, 4, 5];
+
+// Step 1: Create a function that adds two numbers
+function add(accumulator, currentValue) {
+    return accumulator + currentValue;
+}
+
+// Step 2: Use reduce to sum the numbers in the array
+let sum = numbers.reduce(add, 0);  // Start with 0 as the initial value
+
+console.log(sum);  // Output: 15
+
+
+
+let product = numbers.reduce(function(accumulator, currentValue) {
+    return accumulator * currentValue;
+}, 1);  // Initial value is 1 for multiplication
+console.log(product);  // Output: 120
+
+
+let nestedArray = [[1, 2], [3, 4], [5]];
+let flattened = nestedArray.reduce(function(accumulator, currentArray) {
+    return accumulator.concat(currentArray);
+}, []);  // Initial value is an empty array
+console.log(flattened);  // Output: [1, 2, 3, 4, 5]
+
+
+ */
+
+
+
 
 
 // for(i in arr) {
