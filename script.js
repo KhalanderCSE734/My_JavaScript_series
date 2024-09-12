@@ -24,9 +24,9 @@
 
 //splice is very usefull method in order to  make changes in array using indices or to add elements in beginning or wherever you want
 // let arr = [1,2,5,6,7,20,8,10];
-// arr.splice(2,0,3,4); // add
-// arr.splice(7,1); //delete
-// arr.splice(8,0,9); // add
+// arr.splice(2,0,3,4); // add         //  o/p:- 1, 2,  3, 4,  5, 6, 7, 20, 8, 10
+// arr.splice(7,1); //delete           //  o/p:- 1, 2,  3, 4,  5, 6, 7, 20, 8
+// arr.splice(8,0,9); // add           //  o/p:- 1, 2,  3, 4,  5, 6, 7, 20, 8, 10, 9
 // console.log(arr);
 
 //If we pass only single argument in splice, then it will delete all the elements from that idex
@@ -242,6 +242,10 @@ para.after(button); It will add at the end of the node, but outside, this thing 
 
 */
 
+
+/*
+
+
 let para = document.querySelector(".para");
 const button = document.createElement("button");
 button.classList.add("newButton");
@@ -253,7 +257,7 @@ button.style.cursor = "pointer";
 let body = document.querySelector("body");
 body.prepend(button);
 
-
+*/
 
 
 
