@@ -440,6 +440,31 @@ body.prepend(button);
 
 // fun1(1,fun2);
 
+
+
+
+// console.log("Mera naam namme hai");
+// function fun1(a,callback){
+//     setTimeout(()=> {
+//         console.log(`data ${a}`);
+//             if(callback)
+//                 callback();
+//     },2000);
+    
+// }
+
+// function fun2(){
+//     fun1(2,()=>{
+//         fun1(3);
+//     });
+// }
+
+// fun1(1,fun2);
+
+
+
+
+
 // YYYYYYYYEeeeEEEEEEEEEEEEEEEEEE
 /// I got the working of callback function YUUUUUUUUUUUPPPPPPPPPPPPPPPPPPPPPPPPP
 // NOthing more than this 
@@ -466,10 +491,28 @@ body.prepend(button);
 
 
 // Promises
+//Promises are objects and it also has prototype
+//Whenever promises are created there will be 3 states      1.)Pending(Unfullfilled)  2.)Resolved(Fullfilled)  3.)Rejected 
 
 // let promise = new Promise((resolve,reject)=>{            // Resolve and reject are two callbacks, which is automatically created by js
 // console.log("anything");
 // });
+
+
+//let promise = new Promise((resolve,reject)=>{console.log("Hello Mister");});      // This gives pending state
+
+// We can either resolve it or can even reject it
+// let promise = new Promise((resolve,reject)=>{
+//     console.log(`Hello Promise`);
+//     resolve(`I have got resolve`);          // This is the state of fullfilled or resolve with the resolved message of as entered
+// });
+
+
+// let promise = new Promise((resolve,reject)=>{
+//     console.log(`Hello Promise`);
+//     reject(`I don't want to resolve it`);          // This is the state of rejected or rejected with the error message of as entered
+// });
+
 
 // console.log("Hello");
 
@@ -680,3 +723,96 @@ fun1(1).then((resolved)=>{
 
 
 
+//Concept of Async Await
+
+//Async function returns promise
+//Await pauses the execution of its surrounding async function until promise is settled
+// And 'await' can be used only in 'async' function
+
+
+/*
+async function asyncFun1(){
+    console.log(`Hello I'm async function`);        //Even if we don't have any return statement or something we will get promise for sure because it is async function
+}
+
+let promise1 = asyncFun1();                         //This will get promise from asyncFun1
+
+*/
+
+
+/*
+
+
+function api1(city){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            if(city=="Bengalore"){
+            console.log(`Weather of ${city} is 23deg celcius`);
+            } else if(city=="Shivamogga"){
+                console.log(`Weather of ${city} is 30deg celcius`);
+            }   else if(city=="Raichur"){
+                console.log(`Weather of ${city} is 37deg celcius`);
+            } else{
+                console.log(`Weather of ${city} is 20deg celcius`);
+            }
+            resolve(`Got the data`);
+        },3000);
+    });
+}
+
+// await api1(`Bengalore`);        // We directly can't use 'await' like this, we should use it only in async function
+
+ (async function callAPI(){
+    console.log("Getting data of Bengalore");
+   await api1(`Bengalore`);
+   console.log("Getting data of Shivamogga");
+   await api1(`Shivamogga`);
+   console.log("Getting data of Raichur");
+   await api1(`Raichur`);
+   console.log("Getting data of Kodagu");
+   await api1(`Kodagu`);
+})()
+
+*/
+
+
+//Finally API calls 
+
+//We use 'fetch api' in order to get the data of that 'api', It provides an interface for fetching resources
+//It uses 'Requests' and 'Response' objects
+// And we use 'fetch()' methods, and it return promise
+//Status 200 represents successful request
+
+
+const URL = "https://cat-fact.herokuapp.com/facts";
+
+// let promise = fetch(URL);
+// console.log(promise);
+
+//Whenver we are handling with APIs' we will get promise, so we need to handles those in either 'promise methods which is '.then' or '.catch' ' or 'async, await' or 'callbacks'
+//Here we'll use async await
+
+const button = document.querySelector(".btn");
+let para = document.querySelector(".name");
+
+const getFacts = async ()=>{
+    // await fetch(URL);
+   let response =  await fetch(URL);
+   // console.log(response);  
+   //Here we can't get our exact response which we were expecting because of structure
+   //This is actually in 'json'(JavaScript Standord Object Notation) format , initially it used to be in 'AJAX'(Asynchronous JavaScript And XML) 
+   //So now we need to convert the above in 'javaScript objects' form
+   //The request which we get is in 'json' format and we need to convert it into 'javaScript object' format 
+   // And to convert it into "'javaScript object' format " we use "json()" method which again returns one more promise
+   // And here in 'json()' method in input we give 'json' format and in output we get 'javaScript object'
+
+    // await response.json();           // And here again 'json' returns promise so we use await
+    let data = await response.json();
+    // console.log(data);
+    // console.log(data[0].text);
+
+
+    para.innerText = para.innerText + `\n ${data[0].text}`;
+}
+
+button.addEventListener("click",getFacts);

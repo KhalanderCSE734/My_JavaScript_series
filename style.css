@@ -6,9 +6,10 @@
 }
 
 .btn {        
-    padding:10px 20px;
-    color:green;
-    background-color:red;
+    padding:15px 20px;
+    color:orange;
+    background-color:lightseagreen;
+    cursor:pointer;
 }
 p {
     background-color: aquamarine;
