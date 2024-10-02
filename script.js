@@ -78,7 +78,8 @@
 /* in each iteration 'res' will have returned value and 'cur' will have the 'i'th value of array
     but in first iteration 'res' takes first value and 'cur' takes second value 
     And then first line things happen
-*/
+*/  // The above written thing works only when We don't pass anything as second argument for reduce method apart from callback other wise 'res' will take the value which is passed and 'cur' will start from 1st index of the array    (Try to get visualisation from chatGPT with clear prompt)
+
 // const result = arr.reduce((res,cur)=>{
 //     return res+cur;
 // });

@@ -1,7 +1,7 @@
 /*
 
 let x;
-console.log("Type of x undefined is "+typeof(x));
+console.log("Type of x  is "+typeof(x));            undefined
 // Un-defined and not-defined both are different 
 // If I don't declare 'let x' and print x then I'll get not defined and above case is  un-defined
 let y = null;
@@ -65,7 +65,7 @@ let name3 = name.concat(name2);
 // console.log(name3);
 
 let name4 = name.replace("d Kha","D KHA");
-// console.log(name4);                                Till now, whatever methods we are using in String it is returning something, but in arrays everything is happening in-place
+// console.log(name4);                                Till now, whatever methods we are using in String it is returning something, but in arrays everything is happening in-place, But obviously when we use 'filter', 'map', and 'reduce' they return the new one
 */
 
 
