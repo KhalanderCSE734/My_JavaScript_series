@@ -205,7 +205,7 @@ console.log(flattened);  // Output: [1, 2, 3, 4, 5]
 
 
 // DOM PART
-
+ 
 // console.log(window);
 // Window object is created by browser itself
 //DOM is "When we create html and js files, html elements converts into object in js files and called Document object model which is present in window object"
@@ -220,10 +220,12 @@ console.log(flattened);  // Output: [1, 2, 3, 4, 5]
 
 
 // let a = document.querySelector(".first");
-// a.innerHTML = "Mohammed Khalander";
-// let b = document.querySelector(".parent");
+// a.innerHTML = "Mohammed Khalander";              // We can even write tags in 'innerHTML'
+let b = document.querySelector(".parent");
 // console.log(b.children);
+// console.log(b.innerHTML);
 // console.log(b.innerText);
+// console.log(b.textContent);
 
 // console.log(b.innerHTML);
 // console.log(b.tagName);
@@ -426,7 +428,7 @@ body.prepend(button);
 //     console.log(a+b);
 // })
 
-// console.log("Mera naam namme hai");
+// console.log("Mera naam name hai");
 // function fun1(a,callback){
 //     setTimeout(()=> {
 //         console.log(`data ${a}`);
@@ -444,7 +446,7 @@ body.prepend(button);
 
 
 
-// console.log("Mera naam namme hai");
+// console.log("Mera naam name hai");
 // function fun1(a,callback){
 //     setTimeout(()=> {
 //         console.log(`data ${a}`);
