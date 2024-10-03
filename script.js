@@ -221,7 +221,7 @@ console.log(flattened);  // Output: [1, 2, 3, 4, 5]
 
 // let a = document.querySelector(".first");
 // a.innerHTML = "Mohammed Khalander";              // We can even write tags in 'innerHTML'
-let b = document.querySelector(".parent");
+// let b = document.querySelector(".parent");
 // console.log(b.children);
 // console.log(b.innerHTML);
 // console.log(b.innerText);
@@ -497,7 +497,7 @@ body.prepend(button);
 //Promises are objects and it also has prototype
 //Whenever promises are created there will be 3 states      1.)Pending(Unfullfilled)  2.)Resolved(Fullfilled)  3.)Rejected 
 
-// let promise = new Promise((resolve,reject)=>{            // Resolve and reject are two callbacks, which is automatically created by js
+// let promise = new Promise((resolve,reject)=>{           // Resolve and reject are two callbacks, which is automatically created by js
 // console.log("anything");
 // });
 
@@ -632,7 +632,7 @@ promise1.then((resolved)=>{
 
 })
 
-console.log(`Fetching data 1...`);
+console.log(`Fetching data 2...`);
 promise2.then((resolved)=>{
     console.log(`Your promise 2 got resolved`)
     console.log(`and the result is ${resolved}`);
@@ -813,8 +813,6 @@ const getFacts = async ()=>{
     let data = await response.json();
     // console.log(data);
     // console.log(data[0].text);
-
-
     para.innerText = para.innerText + `\n ${data[0].text}`;
 }
 

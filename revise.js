@@ -69,7 +69,12 @@ let name4 = name.replace("d Kha","D KHA");
 */
 
 
+// let num = Math.random();
+// console.log(num);
 
+// 20 - 30
+// let num2 = (Math.floor(Math.random() * (30-20)) + 20) ;
+// console.log(num2); 
 
 
 
