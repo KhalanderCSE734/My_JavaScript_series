@@ -817,3 +817,11 @@ const getFacts = async ()=>{
 }
 
 button.addEventListener("click",getFacts);
+
+
+
+
+
+
+
+
